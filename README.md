@@ -38,7 +38,7 @@ Commands to correlate 'apt' versions (such as 2.1.1) to Duet internal firmware n
 
 * Shows version and associated reprapfirmware internal version, for all duetsoftwareframework packages available on your feed(s). Example:
 
-`./DuetVersionsAll.sh
+`./DuetVersionsAll.sh`<br>
 `Expect this to take several seconds per line of output.`<br>
 ` `<br>
 `duetsoftwareframework 2.1.1 contains reprapfirmware version 2.1.1-1 which is internal version 3.01-RC10`<br>
