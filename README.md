@@ -1,5 +1,5 @@
 # DuetVersions
-Commands to correlate 'apt' versions to Duet style "V3.01 RC5"
+Commands to correlate 'apt' versions (such as 2.1.1) to Duet internal firmware nomenclature (such as "V3.01 RC5")
 
 ## Installation
     cd
