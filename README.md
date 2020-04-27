@@ -46,4 +46,4 @@ Commands to correlate 'apt' versions (such as 2.1.1) to Duet internal firmware n
 `duetsoftwareframework 2.0.0 contains reprapfirmware version 2.0.0-1 which is internal version 3.01-RC8`<br>
 `duetsoftwareframework 1.3.2 contains reprapfirmware version 1.3.2-1 which is internal version 3.01-RC7`<br>
 `duetsoftwareframework 1.3.1 contains reprapfirmware version 1.3.1-1 which is internal version 3.01-RC6`<br>
-'...more...'`<br>
+`...snip...`<br>
