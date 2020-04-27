@@ -14,6 +14,6 @@ By default shows highest available, installed, and dependencies for installed, a
 
     cd
     cd DuetVersions
-    .DuetVersionAll.sh
+    ./DuetVersionAll.sh
 
 Shows version and associted reprapfirmware internal version, for all duetsoftwareframework packages available on your feed(s)
