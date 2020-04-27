@@ -8,7 +8,7 @@ git clone https://github.com/DanalEstes/DuetVersions
 
     ./DuetVersion.sh
 
-By default shows highest available, installed, and dependencies for installed. Specify a number as a command line argument to see that may 'backward' from highest available.
+By default shows highest available, installed, and dependencies for installed, and reprapfirmware internal version for installed. Specify a number as a command line argument to see that may 'backward' from highest available.
 
     .DuetVersionAll.sh
 
