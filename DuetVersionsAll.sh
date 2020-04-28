@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 printf "Expect this to take several seconds per line of output.\n"
+printf "Note: For highest accuracy, run 'sudo apt get update' first.\n"
 printf "\n"
 LIST="$( apt list duetsoftwareframework -a 2>/dev/null | grep -i -v listing)"
 

@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
-LIST="$( apt list duetsoftwareframework -a 2>/dev/null)"
+printf "Note: For highest accuracy, run 'sudo apt get update' first.\n"
+printf "\n"
+LIST="$( apt list duetsoftwareframework -a 2>/dev/null | grep -v -i Listing)"
 
-HIGH="$( echo "$LIST" | head -n2 | tail -n1 | cut -d' ' -f 2)"  
+HIGH="$( echo "$LIST" | head -n1 | tail -n1 | cut -d' ' -f 2)"  
 printf "  Highest Available DuetSoftwareFramework = $HIGH\n"
 
 DSFV=$( echo "$LIST" | grep installed | cut -d' ' -f 2 )  
@@ -9,10 +11,11 @@ printf "Currently Installed DuetSoftwareFramework = $DSFV\n"
 
 if [ $# -gt 0 ]
 then
+	N=$(expr $1 + 1)
 	printf "\n"
 	printf "Command line arg specified to request Release -$1 from highest available.\n"
-	DSFV=$( echo "$LIST" | head -n$1 | tail -n1 |  cut -d' ' -f 2 )  
-	printf "       Highest-$1 is DuetSoftwareFramework = $DSFV\n"
+	DSFV=$( echo "$LIST" | head -n$N | tail -n1 |  cut -d' ' -f 2 )  
+	printf "Highest-$1 is DuetSoftwareFramework = $DSFV\n"
 fi
 
 printf "\n"
