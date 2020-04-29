@@ -18,6 +18,11 @@ then
 	printf "Highest-$1 is DuetSoftwareFramework = $DSFV\n"
 fi
 
+if [ ! $DSFV ]
+then
+	exit
+fi
+
 printf "\n"
 printf "Dependencies for DSF version $DSFV are:\n"
 SHOW="$(apt show duetsoftwareframework=$DSFV 2>/dev/null | grep Depends | tr ',' '\n' | tr ':' '\n' | grep -v Depends) )"
@@ -35,4 +40,3 @@ rm -r /tmp/rrf$RRFV > /dev/null 2>&1
 
 printf "\n"
 printf "reprapfirmware apt version $RRFV is internal version $RRFR\n"
-
