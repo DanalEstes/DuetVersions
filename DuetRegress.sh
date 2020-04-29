@@ -47,7 +47,7 @@ MAST=$(echo "$MAST" | sed 's/  / /g')
 MASL=$(echo "$MAST" | tr ' ' '\n')
 MASL=$(echo "$MASL" | grep '=')
 SORT=$(echo "$MASL" | sort --unique --field-separator== -k 1,1 )
-MAST=$(echo "$SORT" | tr '\n' ' ')
+MAST=$(echo "$SORT" | tr '\n' '\' | sed 's|\\| \\\n    |g')
 printf "\n"
 printf "To regress to DSF version $1 which is RRF version $RRFR:\n"
 printf "1) Backup your files via:\n"
@@ -55,9 +55,9 @@ printf "  mkdir ~/duetback\n"
 printf "  cp -r /opt/dsf/sd/* ~/duetback\n"
 printf "or similar. Verify that the backup worked: 'ls ~/duetback' should show directories: 'filaments firmware gcodes macros sys' or similar.\n"
 printf "\n"
-printf "2) Run this command: (it is long, be sure you get it all on one line)\n"
+printf "2) Run this command: (it uses line continue back slashes, be sure you get it all)\n"
 #printf "  sudo apt -y remove duetsoftwareframework\n"
-printf "  sudo apt -y --allow-downgrades install duetsoftwareframework=$1 $MAST \n"
+printf "  sudo apt install \\ \n    duetsoftwareframework=$1 \\ \n    $MAST--allow-downgrades\n"
 printf "\n"
 printf "3) Verify system is running properly, web interface opens, etc\n"
 printf "\n"
