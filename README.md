@@ -5,10 +5,7 @@ Commands to correlate 'apt' versions (such as 2.1.1) to Duet internal firmware n
     cd
     git clone https://github.com/DanalEstes/DuetVersions
 
-## Run
-    cd
-    cd DuetVersions
-    ./DuetVersion.sh
+## Run DuetVersion.sh
 
 * By default shows highest available, installed, and dependencies for installed, and reprapfirmware internal version for installed. 
 * Specify a number as a command line argument to see same info for that many lines 'backward' from highest available. Example:
@@ -32,9 +29,7 @@ Commands to correlate 'apt' versions (such as 2.1.1) to Duet internal firmware n
 ` `<br>
 `reprapfirmware apt version 1.0.4.1-1 is internal version 3.0beta10+1`<br>
 
-    cd
-    cd DuetVersions
-    ./DuetVersionAll.sh
+## Run DuetVersionsAll.sh
 
 * Shows version and associated reprapfirmware internal version, for all duetsoftwareframework packages available on your feed(s). Example:
 
@@ -47,3 +42,11 @@ Commands to correlate 'apt' versions (such as 2.1.1) to Duet internal firmware n
 `duetsoftwareframework 1.3.2 contains reprapfirmware version 1.3.2-1 which is internal version 3.01-RC7`<br>
 `duetsoftwareframework 1.3.1 contains reprapfirmware version 1.3.1-1 which is internal version 3.01-RC6`<br>
 `...snip...`<br>
+
+## Run DuetRegress.sh
+
+* Shows commands that will install a 'back' or 'regressed' version of DSF and friends. 
+
+
+
+
