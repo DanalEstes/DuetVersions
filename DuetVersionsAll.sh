@@ -19,7 +19,8 @@ while IFS= read -r LINE
 	if [ -f "opt/dsf/sd/sys/Duet3Firmware_MB6HC.bin" ]
 	then
 		RRFR=$( strings opt/dsf/sd/sys/Duet3Firmware_MB6HC.bin | grep -a version= | tail -n1 | cut -d'=' -f2 )
-		printf "duetsoftwareframework $DSFV contains reprapfirmware version $RRFV which is internal version $RRFR\n"
+		 DWC=$(echo "$SHOW" | grep duetwebcontrol | sed 's/duetwebcontrol.*=//' | sed 's|)||' | sed 's/  / /g')
+		printf "DSF V$DSFV DWC$DWC RRF $RRFR\n"
 	else
 		printf "duetsoftwareframework $DSFV - Unable to determine reprapfirmware version.\n"
 	fi
